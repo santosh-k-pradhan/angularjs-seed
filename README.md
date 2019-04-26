@@ -1,51 +1,35 @@
-# `angular-seed` — the seed for AngularJS apps
+# `angularjs starter project` — the starter project for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
 to quickly bootstrap your angular webapp projects and dev environment for these projects.
 
-The seed contains a sample AngularJS application and is preconfigured to install the AngularJS
+The project contains a sample AngularJS application and is preconfigured to install the AngularJS
 framework and a bunch of development and testing tools for instant web development gratification.
 
-The seed app doesn't do much, just shows how to wire two controllers and views together.
+The starter app doesn't do much, just shows how to wire two controllers and views together.
 
 
 ## Getting Started
 
-To get you started you can simply clone the `angular-seed` repository and install the dependencies:
+To get you started you can simply clone the `https://github.com/santosh-k-pradhan/angularjs-starter-project.git` repository and install the dependencies:
 
 ### Prerequisites
 
-You need git to clone the `angular-seed` repository. You can get git from [here][git].
+You need git to clone the `https://github.com/santosh-k-pradhan/angularjs-starter-project.git` repository.
 
 We also use a number of Node.js tools to initialize and test `angular-seed`. You must have Node.js
 and its package manager (npm) installed. You can get them from [here][node].
 
-### Clone `angular-seed`
-
-Clone the `angular-seed` repository using git:
+### Clone `https://github.com/santosh-k-pradhan/angularjs-starter-project.git`
 
 ```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
+git clone https://github.com/santosh-k-pradhan/angularjs-starter-project.git
+cd angularjs-starter-project
 ```
-
-If you just want to start a new project without the `angular-seed` commit history then you can do:
-
-```
-git clone --depth=1 https://github.com/angular/angular-seed.git <your-project-name>
-```
-
-The `depth=1` tells git to only pull down one commit worth of historical data.
 
 ### Install Dependencies
 
-We have two kinds of dependencies in this project: tools and AngularJS framework code. The tools
-help us manage and test the application.
-
 * We get the tools we depend upon and the AngularJS code via `npm`, the [Node package manager][npm].
-* In order to run the end-to-end tests, you will also need to have the
-  [Java Development Kit (JDK)][jdk] installed on your machine. Check out the section on
-  [end-to-end testing](#e2e-testing) for more info.
 
 We have preconfigured `npm` to automatically copy the downloaded AngularJS files to `app/lib` so we
 can simply do:
@@ -53,10 +37,6 @@ can simply do:
 ```
 npm install
 ```
-
-Behind the scenes this will also call `npm run copy-libs`, which copies the AngularJS files and
-other front end dependencies. After that, you should find out that you have two new directories in
-your project.
 
 * `node_modules` - contains the npm packages for the tools we need
 * `app/lib` - contains the AngularJS framework files and other front end dependencies
@@ -81,22 +61,16 @@ Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 ```
 app/                  --> all of the source files for the application
   app.css               --> default stylesheet
-  core/                 --> all app specific modules
-    version/              --> version related components
-      version.js                 --> version module declaration and basic "version" value service
-      version_test.js            --> "version" value service tests
-      version-directive.js       --> custom directive that returns the current app version
-      version-directive_test.js  --> version directive tests
-      interpolate-filter.js      --> custom interpolation filter
-      interpolate-filter_test.js --> interpolate filter tests
-  view1/                --> the view1 view template and logic
-    view1.html            --> the partial template
-    view1.js              --> the controller logic
-    view1_test.js         --> tests of the controller
-  view2/                --> the view2 view template and logic
-    view2.html            --> the partial template
-    view2.js              --> the controller logic
-    view2_test.js         --> tests of the controller
+  controllers/          --> contains all the controllers and test spec file
+    home-controller.js    --> the controller logic
+    home.spec.js          --> tests of the controller
+    about-controller.js    --> the controller logic
+    about.spec.js          --> tests of the controller
+  views/                --> the view1 view template and logic
+    about-template.html --> the partial template
+    home-template.html --> the partial template
+  services/             --> the service for REST API call
+    register-service.js --> service for rest api call
   app.js                --> main application module
   index.html            --> app layout file (the main html template file of the app)
   index-async.html      --> just like index.html, but loads js files asynchronously
